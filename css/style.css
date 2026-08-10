@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    /* CORES*/
+    --cor-primaria:#f3f3f3;
+    --cor-secundaria:#064f16f2;
+    --cor-preta:#000000;
+
+    /*FONTES*/
+    --fonte-titulo: 'Space Grotesk', sans-serif;
+    --fonte-texto: 'Montserrat', sans-serif;
+
+    /*MEDIDAS*/
+    --espacamento-pequeno: 0.5rem;
+    --espacamento-medio: 1rem;
+    --espacamento-grande: 2rem;
+
+}
+
+/*CSS RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fonte-titulo);
+    color: var(--cor-preta);
+    line-height: 1.6;
+
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--espacamento-medio);
+}
+
+#video-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
+
+.cabecalho {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--cor-secundaria); 
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 55px;
+}
+
+.logo h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    color:white;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color:white;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: var(--cor-preta);
+}
+
+
+header{
+    padding: var(--espacamento-medio);
+    background-color: var(--cor-primaria);
+    border-bottom: 2px solid var(--cor-secundaria);
+}
+
+/* ====================================
+SEÇÃO INÍCIO
+==================================== */
+
+#inicio{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.texto-inicio{
+    width: 50%;
+    padding-left: 5%;
+}
+
+.frase {
+    color: var(--cor-primaria);
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.texto-inicio h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 5rem;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.texto-inicio h1 span {
+    color: var(--cor-primaria);
+    font-family: var(--fonte-texto);
+}
+
+.texto-inicio p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 600px;
+    color:var(--cor-primaria);
+}
+
+/* ====================================
+BOTÕES
+==================================== */
+
+.botoes {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn,.btn-secundario, .btn-terciario {
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-secundario {
+    background: var(--cor-secundaria);
+    color: white;
+}
+
+.btn-secundario:hover {
+    transform: translateY(-5px);
+}
+
+.btn-terciario {
+    background: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+.btn-terciario:hover {
+    transform: translateY(-5px);
+}
+
+/* ====================================
+SEÇÃO TECNOLOGIA
+==================================== */
+
+#tecnologia {
+    min-height: 100vh;
+    padding: 120px 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    background: var(--cor-primaria);
+}
+
+.coluna {
+    width: 50%;
+}
+
+.coluna h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 4rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+}
+
+.coluna p {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.coluna-sobre {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.coluna-sobre img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
+    transition: .4s;
+}
+
+.coluna-sobre img:hover {
+    transform: scale(1.02);
+}
+
+/* ====================================
+SEÇÃO CURIOSIDADES
+==================================== */
+
+#beneficios{
+    padding: 80px 8% 120px;
+    background: var(--azul-principal);
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+#beneficios h1{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 70px auto;
+    padding: 0;
+    font-family: var(--fonte-titulo);
+    font-size: 6rem;
+    color: var(--vermelho);
+}
+.card-beneficios {
+    width: 100%;
+    background: var(--azul-secundario);
+    border-left: 6px solid var(--vermelho);
+    border-radius: 15px;
+    padding: 25px;
+    transition: .3s;
+}
+
+.card-beneficios:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.3);
+}
+
+.card-beneficios h2 {
+    margin-bottom: 15px;
+    color: var(--vermelho);
+    font-size: 1.8rem;
+}
+
+.card-beneficios{
+    min-height: 230px;
+}
+
+#beneficios .card-container {
+   margin-bottom:120px;
+}
