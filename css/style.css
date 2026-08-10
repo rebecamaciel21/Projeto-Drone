@@ -243,12 +243,12 @@ SEÇÃO TECNOLOGIA
 }
 
 /* ====================================
-SEÇÃO CURIOSIDADES
+SEÇÃO BENEFICIOS
 ==================================== */
 
 #beneficios{
     padding: 80px 8% 120px;
-    background: var(--azul-principal);
+    background: var(--cor-secundaria);
     text-align: center;
     padding-bottom: 150px;
 }
@@ -261,12 +261,12 @@ SEÇÃO CURIOSIDADES
     padding: 0;
     font-family: var(--fonte-titulo);
     font-size: 6rem;
-    color: var(--vermelho);
+    color: var(--cor-preta);
 }
 .card-beneficios {
     width: 100%;
-    background: var(--azul-secundario);
-    border-left: 6px solid var(--vermelho);
+    background: var(--cor-primaria);
+    border-left: 6px solid var(--cor-secundaria);
     border-radius: 15px;
     padding: 25px;
     transition: .3s;
@@ -279,7 +279,7 @@ SEÇÃO CURIOSIDADES
 
 .card-beneficios h2 {
     margin-bottom: 15px;
-    color: var(--vermelho);
+    color: var(--cor-secundaria);
     font-size: 1.8rem;
 }
 
