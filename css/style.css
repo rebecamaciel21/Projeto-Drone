@@ -1,50 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-:root {
-    /* CORES*/
-    --cor-primaria:#f3f3f3;
-    --cor-secundaria:#064f16f2;
-    --cor-preta:#000000;
 
-    /*FONTES*/
+/* ====================================
+VARIÁVEIS
+==================================== */
+
+:root {
+
+    --cor-primaria: #f3f3f3;
+    --cor-secundaria: #064f16f2;
+    --cor-preta: #000000;
+    --cor-branca: #ffffff;
+
     --fonte-titulo: 'Space Grotesk', sans-serif;
     --fonte-texto: 'Montserrat', sans-serif;
 
-    /*MEDIDAS*/
     --espacamento-pequeno: 0.5rem;
     --espacamento-medio: 1rem;
     --espacamento-grande: 2rem;
-
 }
 
-/*CSS RESET*/
-*{
+
+/* ====================================
+RESET
+==================================== */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: var(--fonte-titulo);
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-texto);
     color: var(--cor-preta);
     line-height: 1.6;
-
 }
 
-.container{
-    width: 100%;
-    margin: 0 auto;
-    padding: var(--espacamento-medio);
-}
+
+/* ====================================
+VÍDEO DE FUNDO
+==================================== */
 
 #video-fundo {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
-
     object-fit: cover;
     z-index: -2;
 }
@@ -59,6 +66,11 @@ body{
     z-index: -1;
 }
 
+
+/* ====================================
+CABEÇALHO
+==================================== */
+
 .cabecalho {
     width: 100%;
     padding: 18px 7%;
@@ -68,142 +80,163 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--cor-secundaria); 
+    background: var(--cor-secundaria);
     backdrop-filter: blur(10px);
     z-index: 999;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
 
-.logo img {
-    width: 55px;
+/* LOGO */
+
+.logo a {
+    text-decoration: none;
 }
 
 .logo h1 {
     font-family: var(--fonte-titulo);
     font-size: 2rem;
-    color:white;
+    color: var(--cor-branca);
     letter-spacing: 2px;
-    text-decoration: none;
 }
+
+
+/* MENU */
 
 .menu {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 25px;
 }
 
 .menu a {
     text-decoration: none;
-    color:white;
+    color: var(--cor-branca);
     font-size: 1rem;
     font-weight: 600;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .menu a:hover {
-    color: var(--cor-preta);
+    color: #b8d8be;
 }
 
-
-header{
-    padding: var(--espacamento-medio);
-    background-color: var(--cor-primaria);
-    border-bottom: 2px solid var(--cor-secundaria);
-}
 
 /* ====================================
-SEÇÃO INÍCIO
+BOTÃO AGENDAMENTO
 ==================================== */
 
-#inicio{
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
+.btn-agende {
+    background: var(--cor-branca);
+    color: var(--cor-secundaria) !important;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 700 !important;
+    transition: 0.3s;
 }
 
-.texto-inicio{
-    width: 50%;
-    padding-left: 5%;
+.btn-agende:hover {
+    background: var(--cor-preta);
+    color: var(--cor-branca) !important;
+    transform: translateY(-3px);
+}
+
+
+/* ====================================
+INÍCIO
+==================================== */
+
+#inicio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.texto-inicio {
+    width: 55%;
+    padding-left: 7%;
 }
 
 .frase {
     color: var(--cor-primaria);
     font-weight: 600;
     letter-spacing: 3px;
+    font-size: 0.9rem;
 }
 
 .texto-inicio h1 {
     font-family: var(--fonte-titulo);
     font-size: 5rem;
     line-height: 1;
+    color: var(--cor-branca);
     margin: 20px 0;
 }
 
 .texto-inicio h1 span {
+    display: block;
     color: var(--cor-primaria);
     font-family: var(--fonte-texto);
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-top: 15px;
 }
 
 .texto-inicio p {
     font-size: 1.2rem;
     line-height: 1.8;
     max-width: 600px;
-    color:var(--cor-primaria);
+    color: var(--cor-primaria);
 }
 
+
 /* ====================================
-BOTÕES
+BOTÕES INÍCIO
 ==================================== */
 
 .botoes {
     margin-top: 30px;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
-.btn,.btn-secundario, .btn-terciario {
-    padding: 15px 25px;
-    border-radius: 12px;
+.btn-secundario,
+.btn-terciario {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 10px;
     font-weight: 600;
-    transition: .3s;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .btn-secundario {
     background: var(--cor-secundaria);
-    color: white;
-}
-
-.btn-secundario:hover {
-    transform: translateY(-5px);
+    color: var(--cor-branca);
 }
 
 .btn-terciario {
-    background: var(--cor-secundaria);
-    color: var(--cor-primaria);
+    background: var(--cor-branca);
+    color: var(--cor-secundaria);
 }
 
+.btn-secundario:hover,
 .btn-terciario:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
+
 /* ====================================
-SEÇÃO TECNOLOGIA
+TECNOLOGIA
 ==================================== */
 
 #tecnologia {
     min-height: 100vh;
-    padding: 120px 8%;
+    padding: 120px 7%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 70px;
     background: var(--cor-primaria);
 }
 
@@ -219,74 +252,338 @@ SEÇÃO TECNOLOGIA
 }
 
 .coluna p {
-    font-size: 1.1rem;
-    line-height: 2;
+    font-size: 1.05rem;
+    line-height: 1.8;
     margin-bottom: 20px;
 }
+
+.coluna .destaque {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+}
+
+
+/* IMAGEM MAIOR */
 
 .coluna-sobre {
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .coluna-sobre img {
     width: 100%;
-    max-width: 500px;
+    max-width: 650px;
+    min-height: 420px;
+    object-fit: cover;
     border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
-    transition: .4s;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: 0.4s;
 }
 
 .coluna-sobre img:hover {
     transform: scale(1.02);
 }
 
+
+/* INDICADORES */
+
+.indicadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.indicadores div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 8px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.indicadores strong {
+    font-size: 1.8rem;
+    color: var(--cor-secundaria);
+}
+
+.indicadores span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
 /* ====================================
-SEÇÃO BENEFICIOS
+BENEFÍCIOS
 ==================================== */
 
-#beneficios{
-    padding: 80px 8% 120px;
+#beneficios {
+    padding: 90px 8% 120px;
     background: var(--cor-secundaria);
     text-align: center;
-    padding-bottom: 150px;
 }
 
-#beneficios h1{
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto 70px auto;
-    padding: 0;
+#beneficios h1 {
+    margin-bottom: 55px;
     font-family: var(--fonte-titulo);
-    font-size: 6rem;
+    font-size: 4.5rem;
     color: var(--cor-preta);
 }
-.card-beneficios {
-    width: 100%;
-    background: var(--cor-primaria);
-    border-left: 6px solid var(--cor-secundaria);
-    border-radius: 15px;
-    padding: 25px;
-    transition: .3s;
+
+
+/* GRID DOS CARDS */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.card-beneficios:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,.3);
+
+/* CARDS MENORES */
+
+.card-beneficios {
+    min-height: 190px;
+    padding: 20px;
+    background: var(--cor-primaria);
+    border-left: 5px solid var(--cor-secundaria);
+    border-radius: 12px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-beneficios:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .card-beneficios h2 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: var(--cor-secundaria);
-    font-size: 1.8rem;
+    font-size: 1.35rem;
 }
 
-.card-beneficios{
-    min-height: 230px;
+.card-beneficios p {
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-#beneficios .card-container {
-   margin-bottom:120px;
+
+/* ====================================
+DEPOIMENTOS
+==================================== */
+
+#depoimentos {
+    min-height: 50vh;
+    padding: 100px 8%;
+    background: var(--cor-primaria);
+    text-align: center;
+}
+
+#depoimentos h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 3.5rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+}
+
+
+/* ====================================
+AGENDAMENTO
+==================================== */
+
+#agende {
+    min-height: 50vh;
+    padding: 100px 8%;
+    background: var(--cor-secundaria);
+    color: var(--cor-branca);
+    text-align: center;
+}
+
+#agende h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#agende p {
+    margin-bottom: 30px;
+}
+
+.btn-agende-final {
+    display: inline-block;
+    padding: 14px 28px;
+    background: var(--cor-branca);
+    color: var(--cor-secundaria);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-agende-final:hover {
+    background: var(--cor-preta);
+    color: var(--cor-branca);
+    transform: translateY(-4px);
+}
+
+
+/* ====================================
+RESPONSIVIDADE
+==================================== */
+
+@media (max-width: 900px) {
+
+    .cabecalho {
+
+        padding: 15px 5%;
+
+    }
+
+    .menu {
+
+        gap: 15px;
+    }
+
+    .texto-inicio {
+
+        width: 100%;
+
+        padding: 0 8%;
+    }
+
+    .texto-inicio h1 {
+
+        font-size: 4rem;
+    }
+
+    #tecnologia {
+
+        flex-direction: column;
+
+        padding: 100px 8%;
+    }
+
+    .coluna,
+    .coluna-sobre {
+
+        width: 100%;
+    }
+
+    .coluna-sobre img {
+
+        max-width: 600px;
+
+        min-height: 350px;
+    }
+
+    .card-container {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .logo h1 {
+
+        font-size: 1.6rem;
+    }
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .menu a {
+
+        font-size: 0.85rem;
+    }
+
+    #inicio {
+
+        padding-top: 150px;
+    }
+
+    .texto-inicio h1 {
+
+        font-size: 3rem;
+    }
+
+    .texto-inicio h1 span {
+
+        font-size: 1.4rem;
+    }
+
+    .texto-inicio p {
+
+        font-size: 1rem;
+    }
+
+    .botoes {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .btn-secundario,
+    .btn-terciario {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .coluna h2 {
+
+        font-size: 3rem;
+    }
+
+    .indicadores {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .coluna-sobre img {
+
+        min-height: 280px;
+    }
+
+    #beneficios h1 {
+
+        font-size: 3.2rem;
+    }
+
+    .card-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    #depoimentos h2,
+    #agende h2 {
+        font-size: 2.5rem;
+    }
 }
