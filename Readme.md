@@ -26,19 +26,19 @@ Desenvolvimento de Sistemas — SESI/SENAI Itapeva.
 |  | Rebeca Rodrigues Cardoso Maciel |
 |  | 2°ano B |
 |  | Rafael Ribas |
-|  | [17/08/2026] |
+|  | 17/08/2026 |
 
 
 
-Landing page de apresentação do , um drone agrícola fictício voltado à
+Landing page de apresentação de , um drone agrícola fictício voltado à
 pulverização e ao monitoramento de lavouras. O objetivo da página é convencer o
 agricultor a agendar uma demonstração do produto.
 
 O layout foi construído a partir de um protótipo no Figma, com HTML semântico e CSS,
 sem frameworks.
 
-> Escreva aqui, com suas palavras, o que você fez neste projeto e o que achou mais
-> difícil. Duas ou três frases bastam — não copie o texto acima.
+> Gostei bastante de desenvolver esse projeto, pois pude praticar HTML e CSS e aprender mais sobre design e principalmente sobre responsividade.
+Foi um projeto bem detalhado que me ajudou a perceber como esses pequenos detalhes podem fazer diferença no final. Fiquei satisfeita com o resultado final e com a identidade visual da AgroVant.
 
 
 
@@ -59,13 +59,13 @@ landing-page-drone/
 
 
 
-- [ ] Menu (cabeçalho)
-- [ ] Hero section
-- [ ] Especificações
-- [ ] Vídeo do produto
-- [ ] Cards de benefícios
-- [ ] Depoimentos
-- [ ] Formulário de contato
+- [x] Menu (cabeçalho)
+- [x] Hero section
+- [x] Especificações
+- [x] Vídeo do produto
+- [x] Cards de benefícios
+- [x] Depoimentos
+- [x] Formulário de contato
 
 <!-- Marque com um X entre os colchetes as seções que você concluiu: [x] -->
 
@@ -74,8 +74,8 @@ landing-page-drone/
 -  — `header`, `main`, `section`, `footer`
 -  com variáveis em `:root`
 -  para os layouts
--  com abordagem  e media queries
--  (`rem`, `%`) no lugar de medidas fixas
+-  com abordagem e media queries
+-  (`rem`, `%` e pixel) no lugar de medidas fixas
 
 
 

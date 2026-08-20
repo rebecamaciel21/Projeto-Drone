@@ -107,7 +107,7 @@ CABEÇALHO
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #F3F7EE;
+    background:var(--cor-primaria);
     border-radius: 50%;
     padding: 7px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
@@ -128,7 +128,7 @@ CABEÇALHO
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #FFFFFF;
+    color: var(--cor-branca);
 }
 
 
@@ -144,7 +144,7 @@ CABEÇALHO
 
 
 .menu a {
-    color: #FFFFFF;
+    color: var(--cor-branca);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
@@ -163,7 +163,7 @@ CABEÇALHO
 
 .btn-agende {
     padding: 14px 25px;
-    background: #FFFFFF;
+    background: var(--cor-branca);
     color: #075B2A !important;
     border-radius: 12px;
     font-weight: 700 !important;
@@ -427,7 +427,7 @@ BENEFÍCIOS
     margin-bottom: 55px;
     font-family: var(--fonte-titulo);
     font-size: 4.5rem;
-    color: var(--cor-preta);
+    color: var(--cor-primaria);
 }
 
 
@@ -517,7 +517,7 @@ DEPOIMENTOS
     width: 380px;
     min-height: 330px;
     padding: 35px;
-    background-color: #ffffff;
+    background-color:var(--cor-branca);
     border-radius: 18px;
     text-align: left;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -666,7 +666,7 @@ AGENDAMENTO
 .formulario-agende {
     width: 420px;
 
-    background-color: #ffffff;
+    background-color:var(--cor-branca);
 
     padding: 40px;
 
@@ -720,7 +720,7 @@ AGENDAMENTO
     border-radius: 6px;
 
     background-color: #16a85b;
-    color: #ffffff;
+    color: var(--cor-branca);
 
     font-size: 13px;
     font-weight: 600;
